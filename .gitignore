@@ -1,0 +1,10 @@
+# py artifacts
+__pycache__
+*.py[cod]
+*$py.class
+.ropeproject
+tags
+pip-log.txt
+*.pyc
+/*.egg-info
+debug.log

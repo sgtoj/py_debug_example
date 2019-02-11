@@ -1,0 +1,14 @@
+version: "3.4"
+services:
+  pyapp:
+    image: local/py_debug_example
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    container_name: python_app
+    #volumes:
+      #- ./:/opt/app
+    ports:
+      - 5678:5678
+    command: python -m ptvsd --host 0.0.0.0 --port 5678 --wait app/app.py
